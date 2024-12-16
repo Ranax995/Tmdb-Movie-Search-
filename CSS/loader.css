@@ -1,0 +1,32 @@
+#loader-parent{
+  width:30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #f5f7f8;
+  border-top: 3px solid #ccc;
+  background: rgba(0,0,0,0.03);
+  padding: 10px;
+  animation: spinner 0.5s linear infinite;
+  position: relative;
+  display: none;
+}
+#loader-parent::after{
+  position: absolute;
+  top: 0;
+  right:0;
+  content:'';
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+ }
+}
